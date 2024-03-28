@@ -219,3 +219,62 @@
         max-width: 748px;
     }
 }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+
+.footer_icons {
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+}
+
+.btn-whatssapp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img {
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatssapp .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatssapp:hover .tooltip-text {
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatssapp {
+        img {
+            max-width: 64px;
+        }
+    }
+}
